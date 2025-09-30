@@ -1,13 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const PageLayout = ({ header, footer, children }) => {
+export default function PageLayout({ header, footer, children }) {
   return (
     <div>
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>{footer}</footer>
+      {header}
+      {children}
+      {footer}
     </div>
   );
+}
+
+PageLayout.propTypes = {
+  header: PropTypes.node,
+  footer: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
-export default PageLayout;
+PageLayout.defaultProps = {
+  header: null,
+  footer: null,
+};
