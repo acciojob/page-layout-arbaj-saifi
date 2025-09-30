@@ -9,9 +9,8 @@ const App = () => {
       footer={
         <div className="footer">© 2023 My Website. All rights reserved.</div>
       }
-    >
-      <p>This is the content of my website.</p>
-    </PageLayout>
+      children={<p>This is the content of my website </p>}
+    ></PageLayout>
   );
 };
 
